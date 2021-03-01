@@ -22,7 +22,7 @@
   <!-- MAIN -->
   <main>
     <!-- container-box -->
-    <div class="container-box">
+    <div class="container-box container">
       <!-- box -->
       <div class="box">
         <?php foreach ($dischi as $disco) {?>

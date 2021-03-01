@@ -4,6 +4,10 @@ main{
     @include flex(row, center);
     flex-wrap: wrap;
     padding: 80px 0;
+    &.container {
+      @include container;
+      height: 100%;
+    }
     .box{
       @include flex(column, flex-start);
       flex-basis: 150px;
@@ -12,6 +16,9 @@ main{
       padding: 20px;
       margin: 10px 20px;
       text-align: center;
+      img{
+        max-width: 100%;
+      }
     }
   }
 }
