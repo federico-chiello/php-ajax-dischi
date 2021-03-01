@@ -40,3 +40,15 @@ header .container {
 header .container img {
   width: 50px;
 }
+
+main {
+  background-color: #191919;
+}
+main .container-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 80px 0;
+}

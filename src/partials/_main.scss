@@ -1,0 +1,8 @@
+main{
+  background-color: $colorMain;
+  .container-box{
+    @include flex(row, center);
+    flex-wrap: wrap;
+    padding: 80px 0;
+  }
+}
