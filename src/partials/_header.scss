@@ -1,0 +1,9 @@
+header{
+  background-color: $colorBlack;
+  .container{
+    @include container;
+    img{
+      width: 50px;
+    }
+  }
+}
