@@ -1,7 +1,10 @@
 header{
   background-color: $colorBlack;
+  height: $heightHeader;
   .container{
+    height: 100%;
     @include container;
+    @include flex(row, flex-start);
     img{
       width: 50px;
     }
