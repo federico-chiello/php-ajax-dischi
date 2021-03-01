@@ -13,6 +13,21 @@
   <title>Dischi musicali</title>
 </head>
 <body>
+  <!-- HEADER -->
+  <header>
+
+  </header>
+  <!-- MAIN -->
+  <main>
+    <?php foreach ($dischi as $disco) {?>
+      <img src="<?php echo $disco['poster']; ?>" alt="">
+      <h2><?php echo $disco['title']; ?></h2>
+      <h3><?php echo $disco['author']; ?></h3>
+      <p><?php echo $disco['year']; ?></p>
+      <!-- <?php var_dump($disco); ?> -->
+    <?php } ?>
+
+  </main>
 
 
 </body>
