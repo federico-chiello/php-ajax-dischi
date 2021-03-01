@@ -24,6 +24,11 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  background-color: #191919;
+}
+
 header {
   background-color: black;
   height: 80px;
@@ -41,34 +46,33 @@ header .container img {
   width: 50px;
 }
 
-main {
-  background-color: #191919;
-}
-main .container-box {
+main .container-box .container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding: 80px 0;
-}
-main .container-box.container {
   width: 1070px;
   margin: 0 auto;
   height: 100%;
 }
-main .container-box .box {
+main .container-box .container .box {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  flex-basis: 150px;
-  height: 350px;
-  background-color: black;
-  padding: 20px;
+  flex-basis: 200px;
+  height: 360px;
   margin: 10px 20px;
+  padding-top: 20px;
   text-align: center;
+  color: white;
+  background-color: #2e3a46;
 }
-main .container-box .box img {
-  max-width: 100%;
+main .container-box .container .box img {
+  max-width: 90%;
+}
+main .container-box .container .box h3, main .container-box .container .box p {
+  color: grey;
 }

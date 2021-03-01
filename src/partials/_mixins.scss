@@ -9,3 +9,7 @@
   justify-content: $justify;
   align-items: $alignItems;
 }
+
+@mixin flexBasis ($flexBasis){
+  flex-basis: $flexBasis;
+}
