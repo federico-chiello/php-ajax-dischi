@@ -5,14 +5,27 @@
 let app = new Vue({
   el: '#music',
   data:{
-    dischi: []
+    dischi: [],
+    generiMusica: ['All']
   },
   mounted(){
     axios
       .get('server.php')
       .then( response => {
         this.dischi = response.data;
-         console.log(this.dischi);
+         // console.log(this.dischi);
+        this.genereCanzone();
       });
+  },
+  methods:{
+    genereCanzone(){
+      this.dischi.forEach((item) => {
+        if (!this.generiMusica.includes(item.genre)) {
+          this.generiMusica.push(item.genre);
+        }
+        console.log(this.generiMusica);
+      });
+    }
+
   }
 });

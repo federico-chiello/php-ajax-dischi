@@ -14,15 +14,30 @@
 var app = new Vue({
   el: '#music',
   data: {
-    dischi: []
+    dischi: [],
+    generiMusica: ['All']
   },
   mounted: function mounted() {
     var _this = this;
 
     axios.get('server.php').then(function (response) {
-      _this.dischi = response.data;
-      console.log(_this.dischi);
+      _this.dischi = response.data; // console.log(this.dischi);
+
+      _this.genereCanzone();
     });
+  },
+  methods: {
+    genereCanzone: function genereCanzone() {
+      var _this2 = this;
+
+      this.dischi.forEach(function (item) {
+        if (!_this2.generiMusica.includes(item.genre)) {
+          _this2.generiMusica.push(item.genre);
+        }
+
+        console.log(_this2.generiMusica);
+      });
+    }
   }
 });
 
