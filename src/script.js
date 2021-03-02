@@ -12,7 +12,7 @@ let app = new Vue({
       .get('server.php')
       .then( response => {
         this.dischi = response.data;
-        console.log(this.dischi);
+         console.log(this.dischi);
       });
   }
 });

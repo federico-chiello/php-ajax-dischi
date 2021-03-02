@@ -7,7 +7,24 @@
   \***********************/
 /***/ (() => {
 
+// Seconda Milestone:
+// Attraverso l’utilizzo di Vue ed axios, al caricamento della pagina stampare i dischi musicali.
+// Bonus
+// Filtrare i dati per genere musicale.
+var app = new Vue({
+  el: '#music',
+  data: {
+    dischi: []
+  },
+  mounted: function mounted() {
+    var _this = this;
 
+    axios.get('server.php').then(function (response) {
+      _this.dischi = response.data;
+      console.log(_this.dischi);
+    });
+  }
+});
 
 /***/ }),
 
