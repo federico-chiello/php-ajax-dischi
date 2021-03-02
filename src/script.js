@@ -6,7 +6,8 @@ let app = new Vue({
   el: '#music',
   data:{
     dischi: [],
-    generiMusica: ['All']
+    generiMusica: ['All'],
+    selezioneGenere: 'All'
   },
   mounted(){
     axios
@@ -22,10 +23,9 @@ let app = new Vue({
       this.dischi.forEach((item) => {
         if (!this.generiMusica.includes(item.genre)) {
           this.generiMusica.push(item.genre);
+          // console.log(this.generiMusica);
         }
-        console.log(this.generiMusica);
       });
     }
-
   }
 });

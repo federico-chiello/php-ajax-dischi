@@ -17,16 +17,18 @@
         <img src="img\logo.png" alt="logo">
       </div>
     </header>
-    <select>
-      <option value="genere" v-for="genere in generiMusica">{{genere}}</option>
-    </select>
     <!-- MAIN -->
     <main>
+      <div class="select">
+        <select v-model="selezioneGenere">
+          <option :value="genere" v-for="genere in generiMusica">{{genere}}</option>
+        </select>
+      </div>
       <!-- container-box -->
       <div class="container-box">
         <div class="container">
           <!-- box -->
-          <div class="box" v-for="disco in dischi">
+          <div class="box" v-for="disco in dischi" v-if="selezioneGenere == 'All' || selezioneGenere == disco.genre">
             <img :src="disco.poster" alt="poster" class="pd_b-2">
             <h2 class="pd_b-2">{{disco.title}}</h2>
             <h3 class="pd_b-1">{{disco.author}}</h3>

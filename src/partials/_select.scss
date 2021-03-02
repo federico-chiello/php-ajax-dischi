@@ -1,0 +1,5 @@
+main{
+  .select{
+    @include flex(row, center);
+  }
+}

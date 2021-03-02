@@ -15,7 +15,8 @@ var app = new Vue({
   el: '#music',
   data: {
     dischi: [],
-    generiMusica: ['All']
+    generiMusica: ['All'],
+    selezioneGenere: 'All'
   },
   mounted: function mounted() {
     var _this = this;
@@ -32,10 +33,9 @@ var app = new Vue({
 
       this.dischi.forEach(function (item) {
         if (!_this2.generiMusica.includes(item.genre)) {
-          _this2.generiMusica.push(item.genre);
-        }
+          _this2.generiMusica.push(item.genre); // console.log(this.generiMusica);
 
-        console.log(_this2.generiMusica);
+        }
       });
     }
   }
