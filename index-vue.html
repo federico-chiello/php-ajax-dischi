@@ -23,11 +23,11 @@
       <div class="container-box">
         <div class="container">
           <!-- box -->
-          <div class="box">
-            <img src="" alt="poster" class="pd_b-2">
-            <h2 class="pd_b-2"></h2>
-            <h3 class="pd_b-1"></h3>
-            <p class="pd_b-1"></p>
+          <div class="box" v-for="disco in dischi">
+            <img :src="disco.poster" alt="poster" class="pd_b-2">
+            <h2 class="pd_b-2">{{disco.title}}</h2>
+            <h3 class="pd_b-1">{{disco.author}}</h3>
+            <p class="pd_b-1">{{disco.year}}</p>
           </div>
         </div>
       </div>
